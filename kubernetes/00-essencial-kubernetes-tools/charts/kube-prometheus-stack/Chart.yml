@@ -1,0 +1,3 @@
+name: kube-prometheus-stack
+version: v0.0.1
+apiVersion: v2
