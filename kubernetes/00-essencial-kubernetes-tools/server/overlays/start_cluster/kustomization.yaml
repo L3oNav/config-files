@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
   # Apps enabled for this cluster
   - ../../base
-  - ingress.yaml
 
   # Monitoring
+  # - ../../../apps/monitoring/prometheus/overlays/start_cluster

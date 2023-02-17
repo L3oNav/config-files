@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus-helm
+  name: kube-prometheus-stack
   namespace: argocd
 spec:
   source:
     helm:
       valueFiles:
-        - values-main-cluster.yaml
+        - values-default.yaml

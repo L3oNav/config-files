@@ -1,5 +1,5 @@
 kube-prometheus-stack:
-  namespaceOverride: monitoring
+  namespace: monitoring
   global:
     imagePullSecrets:
       - name: "docker-registry"
