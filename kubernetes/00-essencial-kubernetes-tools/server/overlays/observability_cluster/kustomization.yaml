@@ -6,4 +6,4 @@ resources:
   - ../../base
 
   # Monitoring
-  - ../../../apps/monitoring/kube-prometheus-stack/overlays/start_cluster
+  - ../../../apps/monitoring/kube-prometheus-stack/overlays/observability_cluster
