@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+spec:
+  destination:
+    namespace: ingress-nginx
+    server: https://kubernetes.default.svc # Replace with your Kubernetes API server URL
+  project: default
+  source:
+    repoURL: https://github.com/kubernetes/ingress-nginx.git # Replace with the repository URL containing the Ingress-Nginx YAML files
+    targetRevision: HEAD
+    path: deploy/static/provider/kind # Replace with the provider-specific folder for your cloud provider (e.g. azure, gce, kind)
+  syncPolicy:
+    automated:
+      prune: true # Optional - delete resources that are not in Git repository anymore. Set to false if you don't want this behavior.
+    syncOptions:
+      - CreateNamespace=true # Optional - create the namespace if it doesn't already exist
